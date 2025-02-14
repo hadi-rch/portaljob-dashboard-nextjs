@@ -27,7 +27,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main>
+          <div className="border-t">
+            <div className="bg-background">
+              <div className="flex flex-row">
+                <div className="hidden lg:block w-[18%]">
+                  Sidebar
+                </div>
+                <div className="col-spaan-3 overflow-auto col-span-5 lg:border-l w-[82%]">
+                  <div className="px-5 py-6 lg:px-8">
+                    <div>Header</div>
+                    {children}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </body>
     </html>
   );
